@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="new" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/new" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/new" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-mms-bitfields" />
+			<Add option="-Wall" />
+			<Add directory="C:/developpement/include" />
+			<Add directory="C:/developpement/include/gtk-3.0" />
+			<Add directory="C:/developpement/include/cairo" />
+			<Add directory="C:/developpement/include/gdk" />
+			<Add directory="C:/developpement/include/glib-2.0" />
+			<Add directory="C:/developpement/lib/glib-2.0/include" />
+			<Add directory="C:/developpement/include/pango-1.0" />
+			<Add directory="C:/developpement/lib/gtk-3.0/include" />
+			<Add directory="C:/developpement/include/atk-1.0" />
+			<Add directory="C:/developpement/include/gdk-pixbuf-2.0" />
+		</Compiler>
+		<Linker>
+			<Add library="gtk-win32-2.0" />
+			<Add library="gtk-3" />
+			<Add library="gdk-3" />
+			<Add library="imm32" />
+			<Add library="shell32" />
+			<Add library="ole32" />
+			<Add library="uuid" />
+			<Add library="pangocairo-1.0" />
+			<Add library="pangoft2-1.0" />
+			<Add library="freetype" />
+			<Add library="fontconfig" />
+			<Add library="pangowin32-1.0" />
+			<Add library="gdi32" />
+			<Add library="m" />
+			<Add library="atk-1.0" />
+			<Add library="cairo-gobject" />
+			<Add library="cairo" />
+			<Add library="gdk_pixbuf-2.0" />
+			<Add library="gio-2.0" />
+			<Add library="gobject-2.0" />
+			<Add library="glib-2.0" />
+			<Add library="intl" />
+			<Add library="gtk-win32-3.0" />
+			<Add directory="C:/developpement/lib" />
+		</Linker>
+		<Unit filename="include/Matrice.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Matrice.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
