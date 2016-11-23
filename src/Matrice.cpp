@@ -18,14 +18,14 @@ Matrice::Matrice(Matrice const& MatriceACopier)
 }
 void Matrice::Settable(unsigned int l, unsigned int c)
 {
-    m_l=l;
-    m_c=c;
     if(l==0 && c==0)
     {
         l=m_l;
         c=m_c;
     }
     int i,j;
+    m_l=l;
+    m_c=c;
     for(i=0; i<l; i++)
     {
         vector<float> perm;
@@ -37,7 +37,7 @@ void Matrice::Settable(unsigned int l, unsigned int c)
 void Matrice::Id()
 {
     if(m_l!=m_c)
-      cout<<"Erreur. La matrice n'est pas carrée, impossible de la mettre sous forme d'une matrice identité !"<<endl;
+      cout<<"Erreur. La matrice n'est pas carrÃ©e, impossible de la mettre sous forme d'une matrice identitÃ© !"<<endl;
     else
     {
         for (int i=0; i<m_l; i++)
@@ -48,10 +48,7 @@ void Matrice::Id()
                     m_table[i][j]=0;
     }
 }
-void Matrice::afficher() const
-{
 
-}
 void Matrice::annuler()
 {
     for(int i=0;i<m_l;i++)
@@ -227,7 +224,7 @@ float Matrice::trace()
     }
     else
     {
-        cout<<"La mtarice n'est pas carrée, la calculatrice ne peut pas afficher la trace !"<<endl;
+        cout<<"La mtarice n'est pas carrÃ©e, la calculatrice ne peut pas afficher la trace !"<<endl;
         return 0;
     }
 }
@@ -291,7 +288,7 @@ float Matrice::det()
     }
     else
     {
-        cout<<"La matrice n'est pas carrée, le calcul du déterminant est impossible !"<<endl;
+        cout<<"La matrice n'est pas carrÃ©e, le calcul du dÃ©terminant est impossible !"<<endl;
         return 0;
     }
 }
@@ -299,7 +296,7 @@ Matrice Matrice::inverse()
 {
     if (m_l!=m_c)
     {
-        cout<<"Erreur, la matrice est non carrée, son inversion n'est pas possible ici !"<<endl;
+        cout<<"Erreur, la matrice est non carrÃ©e, son inversion n'est pas possible ici !"<<endl;
         return *this;
     }
     float coeffMax, pinv, dum, temp;
@@ -341,7 +338,7 @@ Matrice Matrice::inverse()
         indxc[i]=icol;
         if(Minv.m_table[icol][icol]==0)
         {
-            cout<<"La matrice est singulière. Son inversion est impossible"<<endl;
+            cout<<"La matrice est singuliÃ¨re. Son inversion est impossible"<<endl;
             return *this;
         }
         pinv=1.0/Minv.m_table[icol][icol];
